@@ -51,6 +51,7 @@ import { AuthService, LoggerService } from '@backstage/backend-plugin-api';
 /**
  * Options to configure the AdrCollatorFactory
  * @public
+ * @deprecated Import from `@backstage-community/search-backend-module-adr` instead
  */
 export type AdrCollatorFactoryOptions = {
   /**
@@ -99,6 +100,7 @@ export type AdrCollatorFactoryOptions = {
 /**
  * Default collator to index ADR documents for Backstage search.
  * @public
+ * @deprecated Import from `@backstage-community/search-backend-module-adr` instead
  */
 export class DefaultAdrCollatorFactory implements DocumentCollatorFactory {
   public readonly type: string = 'adr';

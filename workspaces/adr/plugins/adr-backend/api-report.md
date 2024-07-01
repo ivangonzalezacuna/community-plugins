@@ -22,7 +22,7 @@ import { Readable } from 'stream';
 import { TokenManager } from '@backstage/backend-common';
 import { UrlReader } from '@backstage/backend-common';
 
-// @public
+// @public @deprecated
 export type AdrCollatorFactoryOptions = {
   adrFilePathFilterFn?: AdrFilePathFilterFn;
   cache: PluginCacheManager;
@@ -36,10 +36,10 @@ export type AdrCollatorFactoryOptions = {
   auth?: AuthService;
 };
 
-// @public
+// @public @deprecated
 export type AdrParser = (ctx: AdrParserContext) => Promise<AdrDocument>;
 
-// @public
+// @public @deprecated
 export type AdrParserContext = {
   entity: Entity;
   content: string;
@@ -57,7 +57,7 @@ export type AdrRouterOptions = {
   logger: LoggerService;
 };
 
-// @public
+// @public @deprecated
 export const createMadrParser: (options?: MadrParserOptions) => AdrParser;
 
 // @public (undocumented)
@@ -65,7 +65,7 @@ export function createRouter(
   options: AdrRouterOptions,
 ): Promise<express.Router>;
 
-// @public
+// @public @deprecated
 export class DefaultAdrCollatorFactory implements DocumentCollatorFactory {
   // (undocumented)
   execute(): AsyncGenerator<AdrDocument>;
@@ -79,7 +79,7 @@ export class DefaultAdrCollatorFactory implements DocumentCollatorFactory {
   readonly type: string;
 }
 
-// @public
+// @public @deprecated
 export type MadrParserOptions = {
   locationTemplate?: string;
   dateFormat?: string;

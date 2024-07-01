@@ -20,6 +20,7 @@ import { AdrDocument } from '@backstage-community/plugin-adr-common';
 /**
  * Context passed to a AdrParser.
  * @public
+ * @deprecated Import from `@backstage-community/plugin-adr-common` instead
  */
 export type AdrParserContext = {
   /**
@@ -39,5 +40,6 @@ export type AdrParserContext = {
 /**
  * ADR parser function type.
  * @public
+ * @deprecated Import from `@backstage-community/plugin-adr-common` instead
  */
 export type AdrParser = (ctx: AdrParserContext) => Promise<AdrDocument>;

@@ -15,7 +15,10 @@
  */
 
 import { stringifyEntityRef } from '@backstage/catalog-model';
-import { MADR_DATE_FORMAT } from '@backstage-community/plugin-adr-common';
+import {
+  DEFAULT_LOCATION_TEMPLATE,
+  MADR_DATE_FORMAT,
+} from '@backstage-community/plugin-adr-common';
 
 import { AdrParser } from './types';
 import { madrParser } from './madrParser';
@@ -31,13 +34,11 @@ const applyArgsToFormat = (
   return formatted.toLowerCase();
 };
 
-const DEFAULT_LOCATION_TEMPLATE =
-  '/catalog/:namespace/:kind/:name/adrs?record=:record';
-
 /**
  *
  * Options for the default MADR content parser
  * @public
+ * @deprecated Import from `@backstage-community/plugin-adr-common` instead
  */
 export type MadrParserOptions = {
   /**
@@ -55,6 +56,7 @@ export type MadrParserOptions = {
 /**
  * Default content parser for ADRs following the MADR template (https://adr.github.io/madr/)
  * @public
+ * @deprecated Import from `@backstage-community/plugin-adr-common` instead
  */
 export const createMadrParser = (
   options: MadrParserOptions = {},
